@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Douceurs de Diallo | Boutique de Gâteaux</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🧁 Les Douceurs de Diallo</h1>
+        <p>Pâtisseries artisanales pour tous vos moments de bonheur</p>
+    </header>
+
+    <div class="container">
+        <section class="card">
+            <h2>Notre Carte Gourmande</h2>
+            <div class="grid-gateaux">
+                
+                <div class="card-gateau">
+                    <img src="images/gateau1.jpg" alt="Gâteau Chocolat">
+                    <div class="card-content">
+                        <h3>Délice Chocolat</h3>
+                        <p class="price">25 €</p>
+                        <div class="btn-group">
+                            <button class="btn-detail" onclick="voirDetails('Un classique fondant au chocolat noir intense.')">Détails</button>
+                            <button class="btn-payer" onclick="commander('Délice Chocolat')">Commander</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-gateau">
+                    <img src="images/gateau-a-la-vanille.jpg" alt="Gâteau Vanille">
+                    <div class="card-content">
+                        <h3>Douceur Vanille</h3>
+                        <p class="price">22 €</p>
+                        <div class="btn-group">
+                            <button class="btn-detail" onclick="voirDetails('Parfumé à la vanille naturelle, léger et crémeux.')">Détails</button>
+                            <button class="btn-payer" onclick="commander('Douceur Vanille')">Commander</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-gateau">
+                    <img src="images/gateau-anniversaire.jpg" alt="Gâteau Anniversaire">
+                    <div class="card-content">
+                        <h3>Gâteau Anniversaire</h3>
+                        <p class="price">40 €</p>
+                        <div class="btn-group">
+                            <button class="btn-detail" onclick="voirDetails('Parfait pour vos fêtes, personnalisable sur demande.')">Détails</button>
+                            <button class="btn-payer" onclick="commander('Gâteau Anniversaire')">Commander</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-gateau">
+                    <img src="images/gateau-arc-en-ciel.jpg" alt="Rainbow Cake">
+                    <div class="card-content">
+                        <h3>Arc-en-ciel</h3>
+                        <p class="price">35 €</p>
+                        <div class="btn-group">
+                            <button class="btn-detail" onclick="voirDetails('Un gâteau coloré qui émerveillera petits et grands.')">Détails</button>
+                            <button class="btn-payer" onclick="commander('Gâteau Arc-en-ciel')">Commander</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-gateau">
+                    <img src="images/gateau-au-fromage.jpg" alt="Cheesecake">
+                    <div class="card-content">
+                        <h3>Cheesecake Maison</h3>
+                        <p class="price">28 €</p>
+                        <div class="btn-group">
+                            <button class="btn-detail" onclick="voirDetails('Onctueux et croquant à la fois, le secret de la maison.')">Détails</button>
+                            <button class="btn-payer" onclick="commander('Cheesecake Maison')">Commander</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-gateau">
+                    <img src="images/gateau-trois-mousses.jpg" alt="Trois Mousses">
+                    <div class="card-content">
+                        <h3>Trois Mousses</h3>
+                        <p class="price">32 €</p>
+                        <div class="btn-group">
+                            <button class="btn-detail" onclick="voirDetails('Alliance parfaite de trois chocolats : noir, lait et blanc.')">Détails</button>
+                            <button class="btn-payer" onclick="commander('Trois Mousses')">Commander</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="formulaire-section" class="card hidden">
+            <h2 id="titre-commande">Ma Commande</h2>
+            <form action="mailto:votre-email@gmail.com" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <label>Produit choisi :</label>
+                    <input type="text" id="gateau-choisi" name="Gateau" readonly>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="Nom" placeholder="Votre Nom complet" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="Email" placeholder="Votre adresse Gmail" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="Message" placeholder="Précisez la date de livraison souhaitée..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Envoyer la commande</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Les Douceurs de Diallo - Boutique gérée avec Nginx</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
