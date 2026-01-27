@@ -85,3 +85,33 @@ input, textarea {
     font-size: 1.1rem;
     cursor: pointer;
 }
+*******contact********
+
+.contact-section {
+    padding: 60px 20px;
+    background-color: #fff5e6; /* Un ton crème doux */
+    text-align: center;
+    border-top: 2px solid #d2691e;
+}
+
+.contact-info {
+    margin: 30px 0;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #5d4037;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #d2691e; /* Marron chocolat/caramel */
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #a0522d; /* Plus foncé au survol */
+}
