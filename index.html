@@ -10,17 +10,37 @@
 
 <header>
     <nav>
-        <ul>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#produits">Nos Gâteaux</a></li>
-            <li><a href="#contact">Contactez-nousen cliquant ici</a></li>
-        </ul>
-    </nav>
+    <div class="menu-burger" id="burger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <ul class="nav-links" id="nav-list">
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#a-propos">À Propos de moi</a></li>
+        <li><a href="#nos-gateaux">Nos Gâteaux</a></li>
+        <li><a href="#contact">Contactez-nous</a></li>
+        <li><a href="#order-form">Passer une commande</a></li>
+    </ul>
+</nav>
 </header>
 
 <h1>🧁 Les Douceurs de Diallo</h1>
 <p>Pâtisseries artisanales pour tous vos moments de bonheur</p>
-
+<section id="a-propos" class="about-section">
+    <div class="about-container">
+        <div class="about-image">
+            <img src="images/Patissière.jpg" alt="La pâtissière des Douceurs de Diallo">
+        </div>
+        <div class="about-text">
+            <h2>À propos de moi</h2>
+            <p>Passionnée par l'art de la pâtisserie depuis mon plus jeune âge, j'ai créé <strong>Les Douceurs de Diallo</strong> pour partager ma passion avec vous.</p>
+            <p>Chaque gâteau est confectionné avec amour, en utilisant des ingrédients de qualité pour ravir vos papilles et sublimer vos événements.</p>
+        </div>
+    </div>
+</section>
+<section id="nos-gateaux">
     <div class="container">
         <section class="card">
             <h2>Notre Carte Gourmande</h2>
@@ -30,7 +50,7 @@
                     <img src="images/gateau1.jpg" alt="Gâteau Chocolat">
                     <div class="card-content">
                         <h3>Délice Chocolat</h3>
-                        <p class="price">25 €</p>
+                        <p class="price">6900f</p>
                         <div class="btn-group">
                             <button class="btn-detail" onclick="voirDetails('Un classique fondant au chocolat noir intense.')">Détails</button>
                             <button class="btn-payer" onclick="commander('Délice Chocolat')">Commander</button>
@@ -42,7 +62,7 @@
                     <img src="images/gateau-a-la-vanille.jpg" alt="Gâteau Vanille">
                     <div class="card-content">
                         <h3>Douceur Vanille</h3>
-                        <p class="price">22 €</p>
+                        <p class="price">300f</p>
                         <div class="btn-group">
                             <button class="btn-detail" onclick="voirDetails('Parfumé à la vanille naturelle, léger et crémeux.')">Détails</button>
                             <button class="btn-payer" onclick="commander('Douceur Vanille')">Commander</button>
@@ -54,7 +74,7 @@
                     <img src="images/gateau-anniversaire.jpg" alt="Gâteau Anniversaire">
                     <div class="card-content">
                         <h3>Gâteau Anniversaire</h3>
-                        <p class="price">40 €</p>
+                        <p class="price">5000f</p>
                         <div class="btn-group">
                             <button class="btn-detail" onclick="voirDetails('Parfait pour vos fêtes, personnalisable sur demande.')">Détails</button>
                             <button class="btn-payer" onclick="commander('Gâteau Anniversaire')">Commander</button>
@@ -66,7 +86,7 @@
                     <img src="images/gateau-arc-en-ciel.jpg" alt="Rainbow Cake">
                     <div class="card-content">
                         <h3>Arc-en-ciel</h3>
-                        <p class="price">35 €</p>
+                        <p class="price">4000f</p>
                         <div class="btn-group">
                             <button class="btn-detail" onclick="voirDetails('Un gâteau coloré qui émerveillera petits et grands.')">Détails</button>
                             <button class="btn-payer" onclick="commander('Gâteau Arc-en-ciel')">Commander</button>
@@ -78,7 +98,7 @@
                     <img src="images/gateau-au-fromage.jpg" alt="Cheesecake">
                     <div class="card-content">
                         <h3>Cheesecake Maison</h3>
-                        <p class="price">28 €</p>
+                        <p class="price">3500f</p>
                         <div class="btn-group">
                             <button class="btn-detail" onclick="voirDetails('Onctueux et croquant à la fois, le secret de la maison.')">Détails</button>
                             <button class="btn-payer" onclick="commander('Cheesecake Maison')">Commander</button>
@@ -90,7 +110,7 @@
                     <img src="images/gateau-trois-mousses.jpg" alt="Trois Mousses">
                     <div class="card-content">
                         <h3>Trois Mousses</h3>
-                        <p class="price">32 €</p>
+                        <p class="price">2000f</p>
                         <div class="btn-group">
                             <button class="btn-detail" onclick="voirDetails('Alliance parfaite de trois chocolats : noir, lait et blanc.')">Détails</button>
                             <button class="btn-payer" onclick="commander('Trois Mousses')">Commander</button>
@@ -100,46 +120,66 @@
 
             </div>
         </section>
+</section>
+<section id="commande" class="order-section">
+    <h2>Passer une commande</h2>
+    <form id="order-form">
+        <div class="customer-info">
+            <input type="text" id="client_name" placeholder="Votre nom complet" required>
+            <input type="email" id="client_email" placeholder="Votre email" required>
+        </div>
 
-        <section id="formulaire-section" class="card hidden">
-            <h2 id="titre-commande">Ma Commande</h2>
-            <form action="mailto:votre-email@gmail.com" method="post" enctype="text/plain">
-                <div class="form-group">
-                    <label>Produit choisi :</label>
-                    <input type="text" id="gateau-choisi" name="Gateau" readonly>
-                </div>
-                <div class="form-group">
-                    <input type="text" name="Nom" placeholder="Votre Nom complet" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" name="Email" placeholder="Votre adresse Gmail" required>
-                </div>
-                <div class="form-group">
-                    <textarea name="Message" placeholder="Précisez la date de livraison souhaitée..."></textarea>
-                </div>
-                <button type="submit" class="btn-submit">Envoyer la commande</button>
-            </form>
-        </section>
+        <div class="product-selection">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Modèle de Gâteau</th>
+                        <th>Quantité</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gâteau au Chocolat</td>
+                        <td><input type="number" class="qty" data-name="Chocolat" min="0" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td>Forêt Noire</td>
+                        <td><input type="number" class="qty" data-name="Forêt Noire" min="0" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td>Fraisier</td>
+                        <td><input type="number" class="qty" data-name="Fraisier" min="0" value="0"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <button type="submit" id="btn-facture">Générer la Facture & Envoyer</button>
+    </form>
+</section>
     </div>
 <section id="contact" class="contact-section">
     <h2>Contactez les Douceurs de Diallo</h2>
-    <p>Une question ? Une commande spéciale ?</p>
+    <p class="contact-subtitle">Pour plus d'information vous pouvez nous contacter via les numeros et l'Email ci-dessous</p>
     
-    <div class="contact-info">
-        <p>📍 Adresse : Ouagadougou, Burkina Faso</p>
-        <p>📞 Téléphone : +226 XX XX XX XX</p>
-        <p>📧 Email : contact@lesdouceursdediallo.com</p>
+    <div class="contact-container">
+        <div class="contact-info">
+            <p>📍 <strong>Adresse :</strong> Ouagadougou, Burkina Faso</p>
+            <p>📞 <strong>Téléphone :</strong> +226 01-44-46-87</p>
+            <p>📞 <strong>Téléphone :</strong> +226 04-16-26-86</p>
+            <p>📧 <strong>Email :</strong> diallorainatou496@gmail.com</p>
+        </div>
     </div>
-
-    <a href="mailto:votre-email@exemple.com" class="contact-button">
-        M'envoyer un message
-    </a>
 </section>
 
-    <footer>
-        <p>&copy; 2026 Les Douceurs de Diallo - Boutique gérée avec Nginx</p>
-    </footer>
-
-    <script src="script.js"></script>
+<footer class="main-footer">
+    <p>&copy; 2026 Les Douceurs de Diallo.</p>
+    <div class="footer-links">
+        <a href="#">Mentions Légales</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <p class="footer-credit">Fait avec ❤️ dans le but de vous faire plaisir</p>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
