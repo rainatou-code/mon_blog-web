@@ -1,35 +1,17 @@
-// 1. INITIALISATION EMAILJS
 (function() {
-    // Remplacez par votre vraie clé publique EmailJS
     emailjs.init("n4owbaQG5VOp2Jr07"); 
 })();
 
-// 2. ATTENTE DU CHARGEMENT DU DOM (Une seule fois suffit)
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // --- PARTIE MENU BURGER ---
+    // MENU BURGER
     const burger = document.getElementById('burger-menu');
-    // Vérifiez que l'ID dans votre HTML est bien "nav-links"
     const nav = document.getElementById('nav-links');
-
     if (burger && nav) {
-        burger.addEventListener('click', () => {
-            nav.classList.toggle('active');
-        });
+        burger.addEventListener('click', () => nav.classList.toggle('active'));
     }
 
-    // --- GESTION DU BOUTON FACTURE ---
-    const btnFacture = document.getElementById('btn-facture');
-    if (btnFacture) {
-        btnFacture.addEventListener('click', (e) => {
-            e.preventDefault();
-            alert("Génération de la facture en cours...");
-        });
-    }
-
-    // --- PARTIE FORMULAIRE DE COMMANDE ---
+    // FORMULAIRE DE COMMANDE
     const orderForm = document.getElementById('order-form');
-
     if (orderForm) {
         orderForm.addEventListener('submit', function(event) {
             event.preventDefault();
@@ -40,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
             inputs.forEach(input => {
                 const quantite = parseInt(input.value);
                 if (quantite > 0) {
+                    // On récupère le nom exact du gâteau ici
                     detailsCommande += `${input.getAttribute('data-name')} : ${quantite}\n`;
                 }
             });
@@ -55,15 +38,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 message: detailsCommande
             };
 
-            // Remplacez 'VOTRE_TEMPLATE_ID' par votre vrai ID
+            // Bouton en mode "chargement"
+            const btn = document.getElementById('btn-facture');
+            btn.innerText = "Envoi en cours...";
+            btn.disabled = true;
+
             emailjs.send('service_cmpcn5q', 'template_qthsf3n', templateParams)
-                .then(function(response) {
-                    alert('Merci ! Votre commande a été envoyée avec succès.');
-                    orderForm.reset(); 
+                .then(function() {
+                    alert('Commande envoyée ! Vérifiez votre boîte mail.');
+                    orderForm.reset();
+                    btn.innerText = "Générer la Facture & Envoyer";
+                    btn.disabled = false;
                 }, function(error) {
-                    alert('Erreur lors de l\'envoi. Vérifiez vos IDs EmailJS.');
-                    console.error('Erreur:', error);
+                    alert('Erreur technique. Vérifiez votre console.');
+                    console.error('Erreur EmailJS:', error);
+                    btn.disabled = false;
                 });
         });
     }
-}); // Fermeture correcte du DOMContentLoaded
+});
