@@ -1,5 +1,5 @@
 (function() {
-    emailjs.init("n4owbaQG5VOp2JrO7"); 
+    emailjs.init("n4owbaQG5VOp2Jr07"); 
 })();
 
 document.addEventListener('DOMContentLoaded', () => {
