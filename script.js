@@ -1,7 +1,7 @@
 // 1. INITIALISATION EMAILJS
 (function() {
     // Remplacez par votre vraie clé publique EmailJS
-    emailjs.init("VOTRE_PUBLIC_KEY"); 
+    emailjs.init("n4owbaQG5VOp2Jr07"); 
 })();
 
 // 2. ATTENTE DU CHARGEMENT DU DOM (Une seule fois suffit)
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
             };
 
             // Remplacez 'VOTRE_TEMPLATE_ID' par votre vrai ID
-            emailjs.send('service_cmpcn5q', 'VOTRE_TEMPLATE_ID', templateParams)
+            emailjs.send('service_cmpcn5q', 'template_qthsf3n', templateParams)
                 .then(function(response) {
                     alert('Merci ! Votre commande a été envoyée avec succès.');
                     orderForm.reset(); 
