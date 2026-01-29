@@ -1,27 +1,29 @@
 // 1. INITIALISATION EMAILJS
 (function() {
-    // Utilisez votre Public Key
+    // Remplacez par votre vraie clé publique EmailJS
     emailjs.init("VOTRE_PUBLIC_KEY"); 
 })();
 
-// 2. ATTENTE DU CHARGEMENT DU DOM
-document.addEventListener('DOMContentLoaded', function() {
+// 2. ATTENTE DU CHARGEMENT DU DOM (Une seule fois suffit)
+document.addEventListener('DOMContentLoaded', () => {
     
     // --- PARTIE MENU BURGER ---
     const burger = document.getElementById('burger-menu');
-    const navList = document.getElementById('nav-list');
+    // Vérifiez que l'ID dans votre HTML est bien "nav-links"
+    const nav = document.getElementById('nav-links');
 
-    if (burger && navList) {
+    if (burger && nav) {
         burger.addEventListener('click', () => {
-            navList.classList.toggle('active');
+            nav.classList.toggle('active');
         });
+    }
 
-        // Fermer le menu si on clique sur un lien (très important sur mobile)
-        const navLinks = document.querySelectorAll('.nav-links a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navList.classList.remove('active');
-            });
+    // --- GESTION DU BOUTON FACTURE ---
+    const btnFacture = document.getElementById('btn-facture');
+    if (btnFacture) {
+        btnFacture.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert("Génération de la facture en cours...");
         });
     }
 
@@ -38,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
             inputs.forEach(input => {
                 const quantite = parseInt(input.value);
                 if (quantite > 0) {
-                    // Utilise l'attribut data-name de vos inputs
                     detailsCommande += `${input.getAttribute('data-name')} : ${quantite}\n`;
                 }
             });
@@ -54,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 message: detailsCommande
             };
 
-            // Utilisez vos identifiants réels
+            // Remplacez 'VOTRE_TEMPLATE_ID' par votre vrai ID
             emailjs.send('service_cmpcn5q', 'VOTRE_TEMPLATE_ID', templateParams)
                 .then(function(response) {
                     alert('Merci ! Votre commande a été envoyée avec succès.');
@@ -65,4 +66,4 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
         });
     }
-});
+}); // Fermeture correcte du DOMContentLoaded

@@ -9,21 +9,24 @@
 <body>
 
 <header>
-    <nav>
-    <div class="menu-burger" id="burger-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
+    <nav class="navbar">
+        <div class="logo">Les Douceurs de Diallo</div>
+    
+            <div class="burger-menu" id="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+        </div>
 
-    <ul class="nav-links" id="nav-list">
-        <li><a href="index.html">Accueil</a></li>
-        <a href="a-propos.html">À Propos</a>
-        <li><a href="#nos-gateaux">Nos Gâteaux</a></li>
-        <li><a href="#contact">Contactez-nous</a></li>
-        <li><a href="#order-form">Passer une commande</a></li>
-    </ul>
-</nav>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="a-propos.html">À Propos</a></li>
+            <li><a href="index.html#nos-gateaux">Boutique</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="index.html#commande">Passez une commande</a></li>
+
+        </ul>
+    </nav>
 </header>
 
 <h1>🧁 Les Douceurs de Diallo</h1>
@@ -40,10 +43,7 @@
                     <div class="card-content">
                         <h3>Délice Chocolat</h3>
                         <p class="price">6900f</p>
-                        <div class="btn-group">
-                            <button class="btn-detail" onclick="voirDetails('Un classique fondant au chocolat noir intense.')">Détails</button>
-                            <button class="btn-payer" onclick="commander('Délice Chocolat')">Commander</button>
-                        </div>
+                        
                     </div>
                 </div>
 
@@ -52,10 +52,7 @@
                     <div class="card-content">
                         <h3>Douceur Vanille</h3>
                         <p class="price">300f</p>
-                        <div class="btn-group">
-                            <button class="btn-detail" onclick="voirDetails('Parfumé à la vanille naturelle, léger et crémeux.')">Détails</button>
-                            <button class="btn-payer" onclick="commander('Douceur Vanille')">Commander</button>
-                        </div>
+                        
                     </div>
                 </div>
 
@@ -64,10 +61,7 @@
                     <div class="card-content">
                         <h3>Gâteau Anniversaire</h3>
                         <p class="price">5000f</p>
-                        <div class="btn-group">
-                            <button class="btn-detail" onclick="voirDetails('Parfait pour vos fêtes, personnalisable sur demande.')">Détails</button>
-                            <button class="btn-payer" onclick="commander('Gâteau Anniversaire')">Commander</button>
-                        </div>
+                        
                     </div>
                 </div>
 
@@ -76,10 +70,7 @@
                     <div class="card-content">
                         <h3>Arc-en-ciel</h3>
                         <p class="price">4000f</p>
-                        <div class="btn-group">
-                            <button class="btn-detail" onclick="voirDetails('Un gâteau coloré qui émerveillera petits et grands.')">Détails</button>
-                            <button class="btn-payer" onclick="commander('Gâteau Arc-en-ciel')">Commander</button>
-                        </div>
+                        
                     </div>
                 </div>
 
@@ -88,10 +79,7 @@
                     <div class="card-content">
                         <h3>Cheesecake Maison</h3>
                         <p class="price">3500f</p>
-                        <div class="btn-group">
-                            <button class="btn-detail" onclick="voirDetails('Onctueux et croquant à la fois, le secret de la maison.')">Détails</button>
-                            <button class="btn-payer" onclick="commander('Cheesecake Maison')">Commander</button>
-                        </div>
+                        
                     </div>
                 </div>
 
@@ -100,21 +88,15 @@
                     <div class="card-content">
                         <h3>Trois Mousses</h3>
                         <p class="price">2000f</p>
-                        <div class="btn-group">
-                            <button class="btn-detail" onclick="voirDetails('Alliance parfaite de trois chocolats : noir, lait et blanc.')">Détails</button>
-                            <button class="btn-payer" onclick="commander('Trois Mousses')">Commander</button>
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="card-gateau">
                     <img src="images/gateau-au-yaourt.jpg" alt="Gateau patisserie">
                     <div class="card-content">
-                        <h3>Gateau crémeux</h3>
+                        <h3>Gâteau crémeux</h3>
                         <p class="price">2750f</p>
-                        <div class="btn-group">
-                            <button class="btn-detail" onclick="voirDetails('Alliance parfaite de trois chocolats : noir, lait et blanc.')">Détails</button>
-                            <button class="btn-payer" onclick="commander('Trois Mousses')">Commander</button>
-                        </div>
+                        
                     </div>
                 </div>
 
@@ -123,78 +105,57 @@
                     <div class="card-content">
                         <h3>créme</h3>
                         <p class="price">7500f</p>
-                        <div class="btn-group">
-                            <button class="btn-detail" onclick="voirDetails('Alliance parfaite de trois chocolats : noir, lait et blanc.')">Détails</button>
-                            <button class="btn-payer" onclick="commander('Trois Mousses')">Commander</button>
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="card-gateau">
                     <img src="images/gateau-au-yaourt1.jpg" alt="Gateau patisserie">
                     <div class="card-content">
-                        <h3>Gateau au yaourt</h3>
+                        <h3>Gâteau au yaourt</h3>
                         <p class="price">7500f</p>
-                        <div class="btn-group">
-                            <button class="btn-detail" onclick="voirDetails('Alliance parfaite de trois chocolats : noir, lait et blanc.')">Détails</button>
-                            <button class="btn-payer" onclick="commander('Trois Mousses')">Commander</button>
-                        </div>
+                        
                     </div>
                 </div>
 
                 <div class="card-gateau">
                     <img src="images/gateau-cook-Crispy.jpg" alt="Gateau patisserie">
                     <div class="card-content">
-                        <h3>gateau au cook cris</h3>
+                        <h3>Gâteau au cook cris</h3>
                         <p class="price">9000f</p>
-                        <div class="btn-group">
-                            <button class="btn-detail" onclick="voirDetails('Alliance parfaite de trois chocolats : noir, lait et blanc.')">Détails</button>
-                            <button class="btn-payer" onclick="commander('Trois Mousses')">Commander</button>
-                        </div>
+                        
                     </div>
                 </div>
                 
                 <div class="card-gateau">
                     <img src="images/gateau-croquette1.jpg" alt="Gateau patisserie">
                     <div class="card-content">
-                        <h3>Gateau-croquette de petite tailles</h3>
+                        <h3>Gâteau-croquette de petite tailles</h3>
                         <p class="price">1000f</p>
-                        <div class="btn-group">
-                            <button class="btn-detail" onclick="voirDetails('Alliance parfaite de trois chocolats : noir, lait et blanc.')">Détails</button>
-                            <button class="btn-payer" onclick="commander('Trois Mousses')">Commander</button>
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="card-gateau">
                     <img src="images/gateau-croquette1.jpg" alt="Gateau patisserie">
                     <div class="card-content">
-                        <h3>Gateau-croquette de forme ronde</h3>
+                        <h3>Gâteau-croquette de forme ronde</h3>
                         <p class="price">2500f</p>
-                        <div class="btn-group">
-                            <button class="btn-detail" onclick="voirDetails('Alliance parfaite de trois chocolats : noir, lait et blanc.')">Détails</button>
-                            <button class="btn-payer" onclick="commander('Trois Mousses')">Commander</button>
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="card-gateau">
                     <img src="images/gateau-fruit.jpg" alt="Gateau patisserie">
                     <div class="card-content">
-                        <h3>Gateau accompagner de fruits</h3>
+                        <h3>Gâteau accompagner de fruits</h3>
                         <p class="price">12000f</p>
-                        <div class="btn-group">
-                            <button class="btn-detail" onclick="voirDetails('Alliance parfaite de trois chocolats : noir, lait et blanc.')">Détails</button>
-                            <button class="btn-payer" onclick="commander('Trois Mousses')">Commander</button>
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="card-gateau">
                     <img src="images/gateau-trois-mousses.jpg" alt="Gateau patisserie">
                     <div class="card-content">
-                        <h3>Gateau-trois-mousses</h3>
+                        <h3>Gâteau-trois-mousses</h3>
                         <p class="price">10000f</p>
-                        <div class="btn-group">
-                            <button class="btn-detail" onclick="voirDetails('Alliance parfaite de trois chocolats : noir, lait et blanc.')">Détails</button>
-                            <button class="btn-payer" onclick="commander('Trois Mousses')">Commander</button>
-                        </div>
+                        
                     </div>
                 </div>
 
@@ -206,7 +167,8 @@
 
 <section id="ma-video" class="video-section">
     <div class="container">
-        <h2>Découvrez nos secrets de fabrication</h2>
+        <strong>Découvrez nos secrets de fabrication</strong>
+        <h2>Cette vous montrerez comment faire un gâteau d'Anniversaire délicieux</h2>
         <div class="video-container">
             <iframe 
                 src="https://www.youtube.com/embed/j2df_VT8fC0" 
@@ -217,6 +179,21 @@
             </iframe>
         </div>
     </div>
+    
+</section>
+<section>
+    <h2>Avec cette video vous parviendrez a vous faire des Croquettes cruistillants</h2>
+    <div class="video-container">
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/4Sma-ANteI4" 
+        title="Comment faire les Croquettes de farine" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+    </iframe>
+</div>
 </section>
 <section id="commande" class="order-section">
     <h2>Passer une commande</h2>
@@ -236,16 +213,64 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Gâteau au Chocolat</td>
+                        <td>Délice Chocolat</td>
                         <td><input type="number" class="qty" data-name="Chocolat" min="0" value="0"></td>
                     </tr>
                     <tr>
-                        <td>Forêt Noire</td>
+                        <td>Douceur Vanille</td>
                         <td><input type="number" class="qty" data-name="Forêt Noire" min="0" value="0"></td>
                     </tr>
                     <tr>
                         <td>Fraisier</td>
                         <td><input type="number" class="qty" data-name="Fraisier" min="0" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td>Gâteau Anniversaire</td>
+                        <td><input type="number" class="qty" data-name="Chocolat" min="0" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td>Arc-en-ciel</td>
+                        <td><input type="number" class="qty" data-name="Chocolat" min="0" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td>Cheesecake Maison</td>
+                        <td><input type="number" class="qty" data-name="Chocolat" min="0" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td>Trois Mousses</td>
+                        <td><input type="number" class="qty" data-name="Chocolat" min="0" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td>Gâteau crémeux</td>
+                        <td><input type="number" class="qty" data-name="Chocolat" min="0" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td>créme</td>
+                        <td><input type="number" class="qty" data-name="Chocolat" min="0" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td>Gâteau au yaourt</td>
+                        <td><input type="number" class="qty" data-name="Chocolat" min="0" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td>Gâteau au cook cris</td>
+                        <td><input type="number" class="qty" data-name="Chocolat" min="0" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td>Gâteau-croquette de petite tailles</td>
+                        <td><input type="number" class="qty" data-name="Chocolat" min="0" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td>Gâteau-croquette de forme ronde</td>
+                        <td><input type="number" class="qty" data-name="Chocolat" min="0" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td>Gâteau accompagner de fruits</td>
+                        <td><input type="number" class="qty" data-name="Chocolat" min="0" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td>Gâteau-trois-mousses</td>
+                        <td><input type="number" class="qty" data-name="Chocolat" min="0" value="0"></td>
                     </tr>
                 </tbody>
             </table>
