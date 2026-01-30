@@ -8,6 +8,36 @@ document.addEventListener('DOMContentLoaded', () => {
     const nav = document.getElementById('nav-links');
     if (burger && nav) {
         burger.addEventListener('click', () => nav.classList.toggle('active'));
+
+        // --- GESTION DU FORMULAIRE DE CONTACT ---
+const contactForm = document.getElementById('contact-form');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const btn = document.getElementById('btn-contact');
+        btn.innerText = "Envoi en cours...";
+
+        const contactParams = {
+            from_name: document.getElementById('user_name').value,
+            from_email: document.getElementById('user_email').value,
+            message: document.getElementById('user_message').value
+        };
+
+        // Utilisez le MÊME service ID, mais créez un NOUVEAU template ID sur EmailJS pour les messages
+        emailjs.send('service_cmpcn5q', 'template_d59cxxm', contactParams)
+            .then(function() {
+                alert('Votre message a été envoyé avec succès !');
+                contactForm.reset();
+                btn.innerText = "Envoyer le message";
+            }, function(error) {
+                alert("Erreur lors de l'envoi.");
+                console.error('Erreur:', error);
+                btn.innerText = "Envoyer le message";
+            });
+    });
+}
     }
 
     // FORMULAIRE DE COMMANDE
@@ -57,3 +87,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+// --- GESTION DU BOUTON RETOUR EN HAUT ---
+const backToTopBtn = document.getElementById("back-to-top");
+
+if (backToTopBtn) {
+    // Afficher le bouton quand on descend de 300px
+    window.onscroll = function() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            backToTopBtn.style.display = "block";
+        } else {
+            backToTopBtn.style.display = "none";
+        }
+    };
+
+    // Action de remonter au clic
+    backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth" // Remontée fluide
+        });
+    });
+}

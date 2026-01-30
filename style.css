@@ -218,31 +218,7 @@ header {
     color: white; 
 }
 
-********video*******
-.video-section {
-    display: block;
-    width: 100%;
-    padding: 60px 0;
-    background-color: #fff;
-    clear: both; /* Empêche la vidéo de monter sur la section précédente */
-    position: relative;
-}
 
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%; /* Garde le format rectangulaire sans bug */
-    height: 0;
-    overflow: hidden;
-    margin-bottom: 30px; /* Ajoute un espace après la vidéo pour ne pas coller à la suite */
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
 ******commande******
 .order-section { 
     padding: 50px;
@@ -285,7 +261,7 @@ th, td {
 
 
     
-/* Formulaire */
+/* Formulaire 
 .hidden { display: none; }
 .form-group { margin-bottom: 1rem; }
 input, textarea {
@@ -293,7 +269,7 @@ input, textarea {
     padding: 12px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    box-sizing: border-box; /* Important pour le responsive */
+    box-sizing: border-box; /* Important pour le responsive 
 }
 .btn-submit {
     width: 100%;
@@ -304,64 +280,74 @@ input, textarea {
     border-radius: 8px;
     font-size: 1.1rem;
     cursor: pointer;
-}
+}*/
 
 
-/* --- SECTION CONTACT --- */
+/*contact*/
+
 .contact-section {
-    padding: 60px 20px;
-    background-color: #fff5f7; /* Rose très pâle pour la douceur */
+    padding: 50px 20px;
+    background-color: #fff5f7; /* Rose très pâle comme vos gâteaux */
     text-align: center;
-    color: #333;
 }
 
-.contact-section h2 {
-    font-size: 2.2rem;
-    color: #2c3e50; /* Bleu foncé pro */
-    margin-bottom: 10px;
-}
-
-.contact-subtitle {
-    font-style: italic;
-    margin-bottom: 40px;
-    color: #555;
-}
-
-.contact-info {
-    max-width: 600px;
+#contact-form {
+    max-width: 500px;
     margin: 0 auto;
     background: white;
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05); /* Ombre légère */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-.contact-info p {
-    margin: 15px 0;
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+.form-group {
+    margin-bottom: 15px;
 }
 
-/* --- BOUTON ORANGE --- */
-.btn-message {
-    background-color: #d36a21; /* Orange terre cuite */
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+#btn-contact {
+    background-color: #d36a21; /* Votre orange signature */
     color: white;
+    padding: 12px 25px;
     border: none;
-    padding: 15px 35px;
-    border-radius: 30px;
-    font-size: 1.1rem;
-    font-weight: bold;
+    border-radius: 25px;
     cursor: pointer;
-    transition: transform 0.3s, background-color 0.3s;
-    margin-top: 20px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.btn-message:hover {
-    background-color: #b55a1b;
-    transform: scale(1.05); /* Effet de grossissement au survol */
+#btn-contact:hover {
+    background-color: #a8541a;
+}
+/*retour en haut*/
+#back-to-top {
+    display: none; /* Caché par défaut */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #d36a21; /* Votre orange signature */
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%; /* Bouton bien rond */
+    font-size: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#back-to-top:hover {
+    background-color: #a8541a;
+    transform: scale(1.1); /* Petit effet de zoom au survol */
 }
 
 /* --- FOOTER --- */

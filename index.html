@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Les Douceurs de Diallo | Boutique de Gâteaux</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
 
@@ -165,36 +166,7 @@
         </section>
 </section>
 
-<section id="ma-video" class="video-section">
-    <div class="container">
-        <strong>Découvrez nos secrets de fabrication</strong>
-        <h2>Cette vous montrerez comment faire un gâteau d'Anniversaire délicieux</h2>
-        <div class="video-container">
-            <iframe 
-                src="https://www.youtube.com/embed/j2df_VT8fC0" 
-                title="Tuto Gâteau" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
-        </div>
-    </div>
-    
-</section>
-<section>
-    <h2>Avec cette video vous parviendrez a vous faire des Croquettes cruistillants</h2>
-    <div class="video-container">
-    <iframe 
-        width="560" 
-        height="315" 
-        src="https://www.youtube.com/embed/4Sma-ANteI4" 
-        title="Comment faire les Croquettes de farine" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        allowfullscreen>
-    </iframe>
-</div>
-</section>
+
 <section id="commande" class="order-section">
     <h2>Passer une commande</h2>
     <form id="order-form">
@@ -281,17 +253,21 @@
 </section>
     </div>
 <section id="contact" class="contact-section">
-    <h2>Contactez les Douceurs de Diallo</h2>
-    <p class="contact-subtitle">Pour plus d'information vous pouvez nous contacter via les numeros et l'Email ci-dessous</p>
+    <h2>Contactez-moi</h2>
+    <p>Une question ? Un projet de gâteau personnalisé ? Écrivez-moi !</p>
     
-    <div class="contact-container">
-        <div class="contact-info">
-            <p>📍 <strong>Adresse :</strong> Ouagadougou, Burkina Faso</p>
-            <p>📞 <strong>Téléphone :</strong> +226 01-44-46-87</p>
-            <p>📞 <strong>Téléphone :</strong> +226 04-16-26-86</p>
-            <p>📧 <strong>Email :</strong> diallorainatou496@gmail.com</p>
+    <form id="contact-form">
+        <div class="form-group">
+            <input type="text" id="user_name" placeholder="Votre nom" required>
         </div>
-    </div>
+        <div class="form-group">
+            <input type="email" id="user_email" placeholder="Votre email" required>
+        </div>
+        <div class="form-group">
+            <textarea id="user_message" placeholder="Votre message..." rows="5" required></textarea>
+        </div>
+        <button type="submit" id="btn-contact">Envoyer le message</button>
+    </form>
 </section>
 
 <footer class="main-footer">
@@ -302,6 +278,7 @@
     </div>
     <p class="footer-credit">Fait avec ❤️ dans le but de vous faire plaisir</p>
 </footer>
+<button id="back-to-top" title="Retour en haut">↑</button>
 <script src="script.js"></script>
 </body>
 </html>
