@@ -349,6 +349,37 @@ input, textarea {
     background-color: #a8541a;
     transform: scale(1.1); /* Petit effet de zoom au survol */
 }
+.nav-links {
+    display: flex;
+    justify-content: space-between; /* Écarte les deux éléments */
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    padding: 0 20px;
+}
+
+/* Sur Mobile (Smartphone) */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Caché par défaut pour le menu burger */
+        flex-direction: column; /* Aligne les éléments verticalement*/ 
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex !important; /* S'affiche quand on clique sur le burger*/ 
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+}
 
 /* --- FOOTER --- */
 .main-footer {
