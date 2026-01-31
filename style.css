@@ -8,20 +8,40 @@ html, body {
     overflow-x: hidden; /* Empêche le défilement horizontal */
     margin: 0;
     padding: 0;
+    padding-top: 80px; /* Ajustez cette valeur selon la hauteur de votre navbar */
 }
 
+
+
+
 /* --- NAVIGATION --- */
+
+/* 1. On nettoie le header pour enlever la couleur rouge */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;         /* Hauteur fixe pour l'en-tête */
+    background-color: #ffffff !important; /* Force le fond en blanc */
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;      /* Ajoute de l'espace sur les côtés */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* 2. On s'assure que la navbar n'a pas de fond rouge */
 .navbar {
+    background: transparent !important; /* Enlève toute couleur héritée */
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
+
+
 
 .nav-links {
     display: flex;
@@ -50,6 +70,8 @@ html, body {
     border-radius: 3px;
 }
 
+
+
 @media (max-width: 768px) {
     .burger-menu { display: flex; }
     
@@ -60,7 +82,7 @@ html, body {
         top: 60px;
         left: 0;
         width: 100%;
-        background-color: #fff;
+        background-color: #ffffff;
         padding: 20px;
         text-align: center;
         box-shadow: 0 5px 10px rgba(0,0,0,0.1);
@@ -70,6 +92,28 @@ html, body {
         display: flex; /* S'affiche quand on clique */
     }
 }
+
+
+@media screen and (max-width: 768px) {
+    /* On décolle le burger du bord droit */
+    .burger-menu {
+        display: block;
+        cursor: pointer;
+        padding: 10px;    /* Crée une zone de clic plus large et décolle du bord */
+        margin-right: 15px; /* Décolle visuellement du bord de l'écran */
+    }
+
+    /* On rend les barres plus épaisses et visibles */
+    .burger-menu span {
+        display: block;
+        width: 35px;      /* Largeur des barres */
+        height: 5px;      /* Épaisseur augmentée pour la visibilité */
+        background-color: #d36a21; /* Votre orange signature */
+        margin: 6px 0;    /* Espace entre les barres */
+        border-radius: 3px;
+    }
+}
+
 
 
 
@@ -259,28 +303,6 @@ th, td {
 #btn-facture:hover { 
     background: #8b4513; }
 
-
-    
-/* Formulaire 
-.hidden { display: none; }
-.form-group { margin-bottom: 1rem; }
-input, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-sizing: border-box; /* Important pour le responsive 
-}
-.btn-submit {
-    width: 100%;
-    background: #10b981;
-    color: white;
-    border: none;
-    padding: 15px;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    cursor: pointer;
-}*/
 
 
 /*contact*/
